@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>iPlanteD - Plant ID Application</title>
 </head>
 <body>
@@ -12,36 +13,32 @@
     <div class="parent">
         <header class="background-img"><u>iPlanteD</u></header>
             <div class="left-side background-img">A thorough list of previous searches.</br>
-                <form class = "border p-1" id = "citySearch">
-                    <h4>Search for a City</h2>
-                    <input id="city" type = "text" autofocus = "true" class = "form-input"/>
-                    <button class = "btn btn-primary" type = "submit">Search</button>
-                </form>
-                <div class = "past-search border" id = "pastSearched"></div>
+                <input class="search" id="plantInput" placeholder="Enter Plant">
+                <button class="btn btn-primary"  id="plantSearch" type="submit">Button</button>
+                <input class="search" id="zipCodeTB" placeholder="Enter ZipCode">
+                <button class="btn btn-primary"  id="zipSearch" type="submit">Button</button>
+                <div id="list">
 
                 </div>
             </div>
         <div class="container background-img">This plant? Here's what we know about this plant.
-            <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2VyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60">
+            <img class="mainplantimg" src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2VyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60">
             <br>
             <div id="info">
 
             </div>
         </div>
-        <div class="right-side background-img">
-            <td class="zoneInfo">
-                Enter Your Zip Code to Find Your Growing Zone:<br>
-                <input type='text' placeholder='Zip Code' id='zipCodeTB' class='input'/>
-                <button id='submitButton' class='input'>Submit</button>
-        </div>
+        <div class="right-side background-img">Random Facts</div>
+    
         <footer class="background-img">&copy;PMK Designs
         </footer>
     </div>
-    <script src="\buttons.js"></script>
-    <script src="\api.js"></script>
-    <script src="\zone.js"></script>
-
-
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./api.js"></script>
+    <script type="text/javascript" src="./zone.js"></script>
 
 </body>
 </html>

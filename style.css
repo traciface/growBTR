@@ -19,9 +19,44 @@ button, input {
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
+    margin: 0;
+} 
+.wrapper{
+  min-height: 100vh;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
 }
-
-
+.header, .footer{
+  height: 50px;
+  background: #666;
+  color: #fff;
+}
+.content {
+  display: flex;
+  flex: 1;
+  background: #999;
+  color: #000; 
+}
+.columns{
+  display: flex;
+  flex:1;
+}
+.main{
+  flex: 1;
+  order: 2;
+  background: #eee;
+}
+.sidebar-first{
+  width: 20%;
+  background: #ccc;
+  order: 1;
+}
+.sidebar-second{ 
+  width: 20%;
+  order: 3;
+  background: #ddd;
+}
 .container img {
   display: block;
   margin-left: auto;
