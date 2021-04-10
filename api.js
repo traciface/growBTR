@@ -1,13 +1,14 @@
 var imgDiv = document.getElementById('container background-img')
-var searchBtn = document.getElementById('searchBtn');
+var searchBtn = document.getElementById('plantSearch');
 const apiKey = 'token=tGcyeSLgtYKukjgY8iqyFaUrpO9lWKqDxP9QtYcrfMc';
 var plant;
-  $("#searchBtn" ).click(function() {
-    var searchTerm = $("#searchInput").val()
+  $("#plantSearch" ).click(function() {
+    var searchTerm = $("#plantInput").val()
     getPlantInfo(searchTerm)
     $(".right-side").html('')
-  }); 
-function  getPlantInfo (searchTerm) {
+  });
+  
+  function  getPlantInfo (searchTerm) {
     $.ajax({
       //  url: ' https://trefle.io/api/v1/species?token=tGcyeSLgtYKukjgY8iqyFaUrpO9lWKqDxP9QtYcrfMc&filter[common_name]=' + searchTerm,
        url: 'https://trefle.io/api/v1/plants/search?token=tGcyeSLgtYKukjgY8iqyFaUrpO9lWKqDxP9QtYcrfMc&q=' + searchTerm,
